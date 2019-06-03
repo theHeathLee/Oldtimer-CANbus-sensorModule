@@ -1,5 +1,14 @@
 # Oldtimer-CANbus-Box
 
+This is a device to read vital engine information and broadcast it on a CAN bus network.
+
+The following will be impimented
+
+- motor temperature
+- carburetor vacuum
+- rpm from distributer
+- fuel flow
+
 ## Reference Projects:
 
 [Carburetor Vacuum Guage](https://www.instructables.com/id/DIY-Digital-Vacuum-Gauge/)
