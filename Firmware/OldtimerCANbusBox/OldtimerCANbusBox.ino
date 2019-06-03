@@ -10,6 +10,9 @@ int thermoCS = 5;
 int thermoCLK = 6;
 MAX6675 thermocouple(thermoCLK, thermoCS, thermoDO);
 int actualTemperature = 0;
+int vacuumPin = A0;
+uint8_t vacuumValue = 0;
+
 
 
 void setup() {
@@ -33,6 +36,11 @@ void loop() {
 
   actualTemperature = (uint8_t)thermocouple.readCelsius();
   data[0] = actualTemperature;
+
+// vacuum read
+
+  vacuumValue = analogRead(vacuumPin);
+  data[1] = vacuumValue;
 
 //send can messages
 // send data:  ID = 0x100, Standard CAN Frame, Data length = 8 bytes, 'data' = array of data bytes to send
