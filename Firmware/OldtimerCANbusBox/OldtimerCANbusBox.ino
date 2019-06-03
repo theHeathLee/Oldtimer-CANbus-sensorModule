@@ -1,9 +1,16 @@
+#include <max6675.h>
 #include <mcp_can.h>
-#include <mcp_can_dfs.h>
+//#include <mcp_can_dfs.h>
 #include <SPI.h>
 
 MCP_CAN CAN0(10);     // Set CS to pin 10
 byte data[8] = {0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07};
+int thermoDO = 4;
+int thermoCS = 5;
+int thermoCLK = 6;
+MAX6675 thermocouple(thermoCLK, thermoCS, thermoDO);
+int actualTemperature = 0;
+
 
 void setup() {
   
@@ -15,10 +22,17 @@ void setup() {
 
   CAN0.setMode(MCP_NORMAL);   // Change to normal mode to allow messages to be transmitted
 
+
+  
+
 }
 
 void loop() {
-  
+
+// temperature read
+
+  actualTemperature = (uint8_t)thermocouple.readCelsius();
+  data[0] = actualTemperature;
 
 //send can messages
 // send data:  ID = 0x100, Standard CAN Frame, Data length = 8 bytes, 'data' = array of data bytes to send
