@@ -8,6 +8,7 @@ The following will be impimented
 - carburetor vacuum
 - rpm from distributer
 - fuel flow
+s
 
 ## Reference Projects:
 
