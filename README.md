@@ -1,4 +1,4 @@
-# Oldtimer-CANbus-Box
+# Oldtimer-CANbus-sensorModule
 
 This is a device to read vital engine information and broadcast it on a CAN bus network.
 
