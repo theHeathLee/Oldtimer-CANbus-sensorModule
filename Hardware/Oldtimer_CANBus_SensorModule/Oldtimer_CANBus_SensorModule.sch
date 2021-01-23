@@ -1,4 +1,540 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Sensor_Pressure:MPXH6115A U1
+U 1 1 600C8257
+P 7600 1900
+F 0 "U1" H 7170 1946 50  0000 R CNN
+F 1 "MPXH6250AC6U" H 7170 1855 50  0000 R CNN
+F 2 "" H 7100 1550 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/302/MPXH6250A-1127175.pdf" H 7600 2500 50  0001 C CNN
+	1    7600 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 2300 7600 2200
+$Comp
+L power:GND #PWR?
+U 1 1 600CB18A
+P 8250 2400
+F 0 "#PWR?" H 8250 2150 50  0001 C CNN
+F 1 "GND" H 8255 2227 50  0000 C CNN
+F 2 "" H 8250 2400 50  0001 C CNN
+F 3 "" H 8250 2400 50  0001 C CNN
+	1    8250 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R1
+U 1 1 600CE8A9
+P 8250 2100
+F 0 "R1" H 8318 2146 50  0000 L CNN
+F 1 "51K" H 8318 2055 50  0000 L CNN
+F 2 "" V 8290 2090 50  0001 C CNN
+F 3 "~" H 8250 2100 50  0001 C CNN
+	1    8250 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 600CFD0D
+P 8800 2100
+F 0 "C1" H 8915 2146 50  0000 L CNN
+F 1 "47pF" H 8915 2055 50  0000 L CNN
+F 2 "" H 8838 1950 50  0001 C CNN
+F 3 "~" H 8800 2100 50  0001 C CNN
+	1    8800 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 1900 8250 1900
+Wire Wire Line
+	8800 1900 8800 1950
+Wire Wire Line
+	8250 1950 8250 1900
+Connection ~ 8250 1900
+Wire Wire Line
+	8250 1900 8800 1900
+Wire Wire Line
+	7600 2300 8250 2300
+Wire Wire Line
+	8250 2300 8250 2400
+Wire Wire Line
+	8250 2250 8250 2300
+Connection ~ 8250 2300
+Wire Wire Line
+	8800 2250 8800 2300
+Wire Wire Line
+	8800 2300 8250 2300
+Text GLabel 7600 1050 1    50   Input ~ 0
+3V3
+$Comp
+L Device:C C2
+U 1 1 600D260C
+P 8150 1250
+F 0 "C2" V 7898 1250 50  0000 C CNN
+F 1 ".1uF" V 7989 1250 50  0000 C CNN
+F 2 "" H 8188 1100 50  0001 C CNN
+F 3 "~" H 8150 1250 50  0001 C CNN
+	1    8150 1250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7600 1050 7600 1250
+Wire Wire Line
+	8000 1250 7600 1250
+Connection ~ 7600 1250
+Wire Wire Line
+	7600 1250 7600 1600
+Text GLabel 7950 3000 1    50   Input ~ 0
+3V3
+Wire Wire Line
+	7950 3000 7950 3200
+$Comp
+L Device:C C?
+U 1 1 600D803A
+P 8500 3200
+F 0 "C?" V 8248 3200 50  0000 C CNN
+F 1 ".1uF" V 8339 3200 50  0000 C CNN
+F 2 "" H 8538 3050 50  0001 C CNN
+F 3 "~" H 8500 3200 50  0001 C CNN
+	1    8500 3200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8350 3200 7950 3200
+$Comp
+L power:GND #PWR?
+U 1 1 600D8A71
+P 8750 3300
+F 0 "#PWR?" H 8750 3050 50  0001 C CNN
+F 1 "GND" H 8755 3127 50  0000 C CNN
+F 2 "" H 8750 3300 50  0001 C CNN
+F 3 "" H 8750 3300 50  0001 C CNN
+	1    8750 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 3200 8750 3300
+Wire Wire Line
+	8650 3200 8750 3200
+Wire Wire Line
+	7950 3200 7950 3600
+Connection ~ 7950 3200
+$Comp
+L power:GND #PWR?
+U 1 1 600DAD73
+P 7950 4550
+F 0 "#PWR?" H 7950 4300 50  0001 C CNN
+F 1 "GND" H 7955 4377 50  0000 C CNN
+F 2 "" H 7950 4550 50  0001 C CNN
+F 3 "" H 7950 4550 50  0001 C CNN
+	1    7950 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Temperature:MAX31855EASA U?
+U 1 1 600D4E02
+P 7950 4000
+F 0 "U?" H 7950 4581 50  0000 C CNN
+F 1 "MAX31855EASA" H 7950 4490 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8950 3650 50  0001 C CIN
+F 3 "http://datasheets.maximintegrated.com/en/ds/MAX31855.pdf" H 7950 4000 50  0001 C CNN
+	1    7950 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 4350 7950 4400
+Wire Wire Line
+	7950 4400 7950 4550
+Connection ~ 7950 4400
+Text GLabel 8650 3800 2    50   Input ~ 0
+TEMP_SCK
+Text GLabel 8650 3900 2    50   Input ~ 0
+TEMP_SO
+Text GLabel 8650 4100 2    50   Input ~ 0
+TEMP_CS
+Wire Wire Line
+	8650 3800 8350 3800
+Wire Wire Line
+	8350 3900 8650 3900
+Wire Wire Line
+	8650 4100 8350 4100
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 600DDF95
+P 10400 4500
+F 0 "J1" H 10480 4492 50  0000 L CNN
+F 1 "TEMP_Con" H 10480 4401 50  0000 L CNN
+F 2 "" H 10400 4500 50  0001 C CNN
+F 3 "~" H 10400 4500 50  0001 C CNN
+	1    10400 4500
+	1    0    0    -1  
+$EndComp
+Text GLabel 7250 3900 0    50   Input ~ 0
+TEMP+
+Text GLabel 9950 4500 0    50   Input ~ 0
+TEMP+
+Text GLabel 7250 4100 0    50   Input ~ 0
+TEMP-
+Text GLabel 9950 4600 0    50   Input ~ 0
+TEMP-
+Wire Wire Line
+	10200 4500 9950 4500
+Wire Wire Line
+	9950 4600 10200 4600
+Wire Wire Line
+	7550 4100 7250 4100
+Wire Wire Line
+	7250 3900 7550 3900
+$Comp
+L Isolator:SFH617A-1 U?
+U 1 1 600E390A
+P 3300 6350
+F 0 "U?" H 3300 6675 50  0000 C CNN
+F 1 "SFH617A-1" H 3300 6584 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 3100 6150 50  0001 L CIN
+F 3 "http://www.vishay.com/docs/83740/sfh617a.pdf" H 3300 6350 50  0001 L CNN
+	1    3300 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 600E8AE4
+P 2450 6750
+F 0 "#PWR?" H 2450 6500 50  0001 C CNN
+F 1 "GND" H 2455 6577 50  0000 C CNN
+F 2 "" H 2450 6750 50  0001 C CNN
+F 3 "" H 2450 6750 50  0001 C CNN
+	1    2450 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 600EA454
+P 3800 6750
+F 0 "#PWR?" H 3800 6500 50  0001 C CNN
+F 1 "GND" H 3805 6577 50  0000 C CNN
+F 2 "" H 3800 6750 50  0001 C CNN
+F 3 "" H 3800 6750 50  0001 C CNN
+	1    3800 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Zener D?
+U 1 1 600EAA69
+P 2450 6500
+F 0 "D?" V 2404 6580 50  0000 L CNN
+F 1 "D_Zener" V 2495 6580 50  0000 L CNN
+F 2 "" H 2450 6500 50  0001 C CNN
+F 3 "~" H 2450 6500 50  0001 C CNN
+	1    2450 6500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2450 6650 3000 6650
+Wire Wire Line
+	3000 6650 3000 6450
+Connection ~ 2450 6650
+Wire Wire Line
+	3000 6250 2450 6250
+Wire Wire Line
+	2450 6250 2450 6350
+Wire Wire Line
+	2450 6650 2450 6750
+$Comp
+L Device:R_US R?
+U 1 1 600EE3C9
+P 2450 6050
+F 0 "R?" H 2518 6096 50  0000 L CNN
+F 1 "7.5K" H 2518 6005 50  0000 L CNN
+F 2 "" V 2490 6040 50  0001 C CNN
+F 3 "~" H 2450 6050 50  0001 C CNN
+	1    2450 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 6200 2450 6250
+$Comp
+L Device:C C?
+U 1 1 600F2122
+P 1900 6100
+F 0 "C?" H 2015 6146 50  0000 L CNN
+F 1 "AUX" H 2015 6055 50  0000 L CNN
+F 2 "" H 1938 5950 50  0001 C CNN
+F 3 "~" H 1900 6100 50  0001 C CNN
+	1    1900 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 5900 1900 5950
+Wire Wire Line
+	1900 5900 2150 5900
+Wire Wire Line
+	1900 6650 2450 6650
+Wire Wire Line
+	1900 6250 1900 6650
+Text GLabel 2150 5600 0    50   Input ~ 0
+COIL_RPM
+Wire Wire Line
+	2150 5600 2150 5900
+Connection ~ 2150 5900
+Wire Wire Line
+	2150 5900 2450 5900
+Wire Wire Line
+	3600 6450 3800 6450
+$Comp
+L Device:R_US R?
+U 1 1 600F9B9E
+P 3750 5850
+F 0 "R?" H 3818 5896 50  0000 L CNN
+F 1 "10K" H 3818 5805 50  0000 L CNN
+F 2 "" V 3790 5840 50  0001 C CNN
+F 3 "~" H 3750 5850 50  0001 C CNN
+	1    3750 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 600FAF6B
+P 4050 6250
+F 0 "R?" V 4255 6250 50  0000 C CNN
+F 1 "47K" V 4164 6250 50  0000 C CNN
+F 2 "" V 4090 6240 50  0001 C CNN
+F 3 "~" H 4050 6250 50  0001 C CNN
+	1    4050 6250
+	0    -1   -1   0   
+$EndComp
+Text GLabel 3750 5500 1    50   Input ~ 0
+3V3
+Wire Wire Line
+	3750 5500 3750 5700
+Wire Wire Line
+	3750 6000 3750 6250
+Wire Wire Line
+	3600 6250 3750 6250
+Connection ~ 3750 6250
+Wire Wire Line
+	3750 6250 3900 6250
+$Comp
+L Transistor_BJT:2N3906 Q1
+U 1 1 600FFF2B
+P 4950 6450
+F 0 "Q1" V 5185 6450 50  0000 C CNN
+F 1 "2N3906" V 5276 6450 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5150 6375 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3906-D.PDF" H 4950 6450 50  0001 L CNN
+	1    4950 6450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4200 6250 4950 6250
+$Comp
+L Device:R_US R?
+U 1 1 6010419B
+P 5800 6550
+F 0 "R?" V 6005 6550 50  0000 C CNN
+F 1 "10k" V 5914 6550 50  0000 C CNN
+F 2 "" V 5840 6540 50  0001 C CNN
+F 3 "~" H 5800 6550 50  0001 C CNN
+	1    5800 6550
+	0    -1   -1   0   
+$EndComp
+Text GLabel 4500 6550 0    50   Input ~ 0
+3V3
+Wire Wire Line
+	5150 6550 5450 6550
+Wire Wire Line
+	4750 6550 4500 6550
+Wire Wire Line
+	5450 6950 5450 6550
+Connection ~ 2450 6250
+Wire Wire Line
+	5950 6550 6100 6550
+Wire Wire Line
+	3800 6450 3800 6750
+Connection ~ 5450 6550
+Wire Wire Line
+	5450 6550 5650 6550
+$Comp
+L power:GND #PWR?
+U 1 1 601328A3
+P 6100 6850
+F 0 "#PWR?" H 6100 6600 50  0001 C CNN
+F 1 "GND" H 6105 6677 50  0000 C CNN
+F 2 "" H 6100 6850 50  0001 C CNN
+F 3 "" H 6100 6850 50  0001 C CNN
+	1    6100 6850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 6550 6100 6850
+$Comp
+L Interface_CAN_LIN:TJA1051T U?
+U 1 1 60133B2A
+P 4450 4050
+F 0 "U?" H 4450 4631 50  0000 C CNN
+F 1 "TJA1051T" H 4450 4540 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4450 3550 50  0001 C CIN
+F 3 "http://www.nxp.com/documents/data_sheet/TJA1051.pdf" H 4450 4050 50  0001 C CNN
+	1    4450 4050
+	1    0    0    -1  
+$EndComp
+Text GLabel 6050 4000 2    50   Input ~ 0
+CAN_H
+Text GLabel 6050 4200 2    50   Input ~ 0
+CAN_L
+Wire Wire Line
+	5200 3950 4950 3950
+Wire Wire Line
+	4950 4150 5200 4150
+$Comp
+L power:GND #PWR?
+U 1 1 60138B74
+P 4450 4600
+F 0 "#PWR?" H 4450 4350 50  0001 C CNN
+F 1 "GND" H 4455 4427 50  0000 C CNN
+F 2 "" H 4450 4600 50  0001 C CNN
+F 3 "" H 4450 4600 50  0001 C CNN
+	1    4450 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 4450 4450 4600
+Text GLabel 3550 3950 0    50   Input ~ 0
+CAN_RX
+Text GLabel 3550 3850 0    50   Input ~ 0
+CAN_TX
+Wire Wire Line
+	3550 3950 3950 3950
+Wire Wire Line
+	3950 3850 3550 3850
+Text GLabel 4450 3000 1    50   Input ~ 0
+5V
+Wire Wire Line
+	4450 3000 4450 3650
+Text GLabel 3550 4250 0    50   Input ~ 0
+CAN_SILENT
+Wire Wire Line
+	3550 4250 3950 4250
+$Comp
+L Device:R_US R?
+U 1 1 601432D9
+P 5400 4050
+F 0 "R?" H 5468 4096 50  0000 L CNN
+F 1 "120" H 5468 4005 50  0000 L CNN
+F 2 "" V 5440 4040 50  0001 C CNN
+F 3 "~" H 5400 4050 50  0001 C CNN
+	1    5400 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 3950 5200 3900
+Wire Wire Line
+	5200 3900 5400 3900
+Wire Wire Line
+	5400 3900 5650 3900
+Wire Wire Line
+	5650 3900 5650 3950
+Connection ~ 5400 3900
+Wire Wire Line
+	5650 4150 5650 4200
+Wire Wire Line
+	5650 4200 5400 4200
+Wire Wire Line
+	5200 4150 5200 4200
+Wire Wire Line
+	5200 4200 5400 4200
+Connection ~ 5400 4200
+Wire Wire Line
+	5850 3950 5650 3950
+Wire Wire Line
+	5650 4150 5850 4150
+Text GLabel 9950 5200 0    50   Input ~ 0
+CAN_RX
+Text GLabel 9950 5100 0    50   Input ~ 0
+CAN_TX
+Wire Wire Line
+	10200 5100 9950 5100
+Wire Wire Line
+	9950 5200 10200 5200
+$Comp
+L Connector_Generic:Conn_01x04 J?
+U 1 1 601642BA
+P 10400 5000
+F 0 "J?" H 10480 4992 50  0000 L CNN
+F 1 "Conn_01x04" H 10480 4901 50  0000 L CNN
+F 2 "" H 10400 5000 50  0001 C CNN
+F 3 "~" H 10400 5000 50  0001 C CNN
+	1    10400 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60165A56
+P 9450 5050
+F 0 "#PWR?" H 9450 4800 50  0001 C CNN
+F 1 "GND" H 9455 4877 50  0000 C CNN
+F 2 "" H 9450 5050 50  0001 C CNN
+F 3 "" H 9450 5050 50  0001 C CNN
+	1    9450 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 5050 9450 5000
+Wire Wire Line
+	9450 5000 10200 5000
+Text GLabel 9950 4900 0    50   Input ~ 0
+VIN
+Wire Wire Line
+	9950 4900 10200 4900
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 6016BD0F
+P 10400 5600
+F 0 "J?" H 10480 5642 50  0000 L CNN
+F 1 "FuelFlow_Con" H 10480 5551 50  0000 L CNN
+F 2 "" H 10400 5600 50  0001 C CNN
+F 3 "~" H 10400 5600 50  0001 C CNN
+	1    10400 5600
+	1    0    0    -1  
+$EndComp
+Text GLabel 9950 5500 0    50   Input ~ 0
+5V
+Text GLabel 9950 5600 0    50   Input ~ 0
+FuelFlow_Sig
+Text GLabel 5450 6950 3    50   Input ~ 0
+MCU_RPM
+$Comp
+L power:GND #PWR?
+U 1 1 601E680F
+P 9450 5750
+F 0 "#PWR?" H 9450 5500 50  0001 C CNN
+F 1 "GND" H 9455 5577 50  0000 C CNN
+F 2 "" H 9450 5750 50  0001 C CNN
+F 3 "" H 9450 5750 50  0001 C CNN
+	1    9450 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 5750 9450 5700
+Wire Wire Line
+	9450 5700 10200 5700
+Wire Wire Line
+	9950 5600 10200 5600
+Wire Wire Line
+	10200 5500 9950 5500
 $EndSCHEMATC
