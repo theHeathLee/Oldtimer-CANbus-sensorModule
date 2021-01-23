@@ -7,8 +7,8 @@ The following will be impimented
 - motor temperature
 - carburetor vacuum
 - rpm from distributer
-- fuel flow
-s
+-[fuel flow](https://www.conrad.de/de/p/b-i-o-tech-e-k-durchfluss-sensor-fch-m-pom-lc-ad-6-mm-flowmeter-betriebsspannung-bereich-5-24-v-dc-messbereich-0-150392.html#productDownloads)
+
 
 ## Reference Projects:
 
