@@ -13,9 +13,6 @@
 CAN can(PA_11, PA_12);
 SPI thermoSpi(PA_7, PA_6, PA_5);
 max31855 max1(thermoSpi, PB_6);
-//BufferedSerial pcSerial(USBTX, USBRX);
-//#define MAXIMUM_BUFFER_SIZE        32
-//static BufferedSerial serial_port(USBTX, USBRX, 9600);
 
 // Blinking rate in milliseconds
 #define BLINKING_RATE     1000ms
